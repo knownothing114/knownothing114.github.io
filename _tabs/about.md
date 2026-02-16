@@ -32,8 +32,7 @@ order: 4
 
 ## <img src="assets/resumeAssets/info-circle-solid.svg" width="30px" alt="个人信息"> 个人信息
 
-- 男，2003 年出生
-- 求职意向：Java 研发工程师
+- 男，2003年2月27日出生
 - 工作经验：1 年
 - 期望薪资：8-10k
 
