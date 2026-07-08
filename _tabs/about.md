@@ -44,7 +44,7 @@ order: 4
 
 ## <img src="assets/resumeAssets/briefcase-solid.svg" width="30px" alt=""> 工作经历
 
-- **信华信技术股份有限公司，软件开发二部，软件开发工程师，2024.12~2026.2**
+- **信华信技术股份有限公司，软件开发二部，软件开发工程师，2024.12~2026.5**
 
 ## <img src="assets/resumeAssets/project-diagram-solid.svg" width="30px" alt=""> 项目经历
 
