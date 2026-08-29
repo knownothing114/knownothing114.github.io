@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+{% assign seen = '' | split: '' %}
+
+<!-- ============ Hero ============ -->
+<section class="hero glass">
+  <p class="hero-eyebrow">👋 Welcome to my little corner</p>
+  <h1>{{ site.title }}</h1>
+  <p class="hero-tagline">{{ site.tagline }}</p>
+  <div class="hero-stats">
+    <span class="chip">📝 {{ site.posts | size }} 篇文章</span>
+    <span class="chip">🗂️ {{ site.categories | size }} 个分类</span>
+    <span class="chip">🏷️ {{ site.tags | size }} 个标签</span>
+  </div>
+</section>
+
+<!-- ============ Sections ============ -->
+{% for section in site.data.home.sections %}
+  {% assign posts = '' | split: '' %}
+
+  {% for cat in section.categories %}
+    {% for p in site.categories[cat] %}
+      {% unless p.hidden or seen contains p.url %}
+        {% assign seen = seen | push: p.url %}
+        {% assign posts = posts | push: p %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+
+  {% assign posts = posts | sort: 'date' | reverse %}
+  {% assign accent = section.accent | default: '#2563eb' %}
+
+  <section class="home-section" style="--accent: {{ accent }}">
+    <div class="section-head">
+      <h2>{{ section.icon }} {{ section.title }}</h2>
+      {% if section.desc %}
+        <p class="section-desc">{{ section.desc }}</p>
+      {% endif %}
+      <a class="section-more" href="{{ section.link | default: '/categories/' | relative_url }}">
+        查看全部 →
+      </a>
+    </div>
+
+    {% if posts.size == 0 %}
+      <div class="section-empty glass">
+        <p>这个板块还没有文章，敬请期待～ ✨</p>
+      </div>
+    {% else %}
+      <div class="section-grid">
+        {% for p in posts limit: section.limit %}
+          <article class="section-card glass">
+            <a class="sc-link" href="{{ p.url | relative_url }}">
+              <div class="sc-meta">
+                <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: '%Y-%m-%d' }}</time>
+                {% if p.categories.size > 0 %}
+                  <span class="sc-cat">{{ p.categories | first }}</span>
+                {% endif %}
+              </div>
+              <h3 class="sc-title">{{ p.title }}</h3>
+              {% if p.description %}
+                <p class="sc-desc">{{ p.description | strip_html | truncate: 90 }}</p>
+              {% endif %}
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </section>
+{% endfor %}

@@ -1,0 +1,29 @@
+# 首页板块配置
+# categories: 该板块收录的分类(文章按发布时间倒序展示)
+# limit: 每个板块展示的文章数上限
+# accent: 板块主题色(十六进制)
+
+sections:
+  - title: 技术文章
+    icon: 🛠️
+    desc: Java、并发、集合、开发工具与实用技巧
+    accent: "#2563eb"
+    categories: [Java, 多线程, 集合, 开发工具, 插件, 编程知识, 实用技巧, Mac使用技巧]
+    limit: 6
+    link: /categories/
+
+  - title: 个人随笔
+    icon: ✍️
+    desc: 生活记录、读书笔记与所感所想
+    accent: "#db2777"
+    categories: [随笔, 生活, 感悟, 日记, 读书笔记]
+    limit: 4
+    link: /categories/
+
+  - title: 项目与作品
+    icon: 🚀
+    desc: 我做的开源项目与作品
+    accent: "#16a34a"
+    categories: [项目, 开源, 作品]
+    limit: 4
+    link: /categories/
