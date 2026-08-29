@@ -46,17 +46,9 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: |
-          bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}" 2>&1 | tee /tmp/jekyll-build.log || true
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
-
-      - name: Upload build log (debug)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: jekyll-build-log
-          path: /tmp/jekyll-build.log
 
       - name: Test site
         run: |
