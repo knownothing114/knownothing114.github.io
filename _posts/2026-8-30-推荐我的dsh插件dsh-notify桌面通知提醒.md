@@ -1,10 +1,11 @@
 ---
+title: "推荐我的dsh插件dsh-notify桌面通知提醒"
 description: >-
   我开发的第一个 dsh（DeepSeek Harness）插件 dsh-notify：当 dsh 需要你注意时——权限确认、提问、计划审批、回合完成、目标完成/受阻、出错、工作流结束——在桌面弹出原生通知。本文介绍它的功能、安装方式与设计理念。
 categories: [开发工具, 插件]
 tags: [dsh, DeepSeek, 插件, AI, 效率工具]
+views: 680
 ---
-
 > 开源地址：<a href="https://github.com/knownothing114/dsh-notify" target="_blank">github.com/knownothing114/dsh-notify</a>（MIT 协议，欢迎 Star ⭐）
 {: .prompt-tip }
 

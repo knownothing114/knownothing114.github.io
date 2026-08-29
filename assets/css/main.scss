@@ -1,0 +1,154 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+sitemap: false
+---
+
+@charset "utf-8";
+
+/* ========== 主题变量(在 import 前定义以覆盖默认值) ========== */
+$base-color: #3d4148 !default;
+$text-color: #3d4148 !default;
+$accent-color: #2f6fed !default;
+$nav-color: #fff !default;
+$background-color: #fff !default;
+$nav-background-color: #2c3038 !default;
+$code-background-color: #f6f8fa !default;
+$border-color: #e9ecef !default;
+$primary-color: #2f6fed !default;
+$success-color: #3fb950 !default;
+$warning-color: #d29922 !default;
+$danger-color: #f85149 !default;
+$info-color: #2f81f7 !default;
+
+@import "so-simple";
+
+/* ============================================================
+   自定义样式
+   ============================================================ */
+
+/* ---------- 提示块(兼容原 Chirpy 的 {: .prompt-xxx } 语法) ---------- */
+.prompt-tip,
+.prompt-info,
+.prompt-warning,
+.prompt-danger {
+  padding: 0.8em 1em;
+  margin: 1.2em 0;
+  border-left: 4px solid;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.prompt-tip {
+  background: #eaf6ec;
+  border-color: $success-color;
+}
+
+.prompt-info {
+  background: #eaf2fd;
+  border-color: $info-color;
+}
+
+.prompt-warning {
+  background: #fdf4e3;
+  border-color: $warning-color;
+}
+
+.prompt-danger {
+  background: #fdecec;
+  border-color: $danger-color;
+}
+
+/* ---------- 首页统计区 ---------- */
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.home-stats .stat {
+  text-align: center;
+  padding: 1.1rem 0.5rem;
+  background: #f8f9fa;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.home-stats .stat-num {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.home-stats .stat-label {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* ---------- 首页分区标题 ---------- */
+.home-section-title {
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $border-color;
+  font-size: 1.2rem;
+}
+
+/* ---------- 热门文章 ---------- */
+.hot-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.hot-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid $border-color;
+  font-size: 0.95rem;
+}
+
+.hot-list li:last-child {
+  border-bottom: 0;
+}
+
+.hot-list .hot-views {
+  color: #6c757d;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+/* ---------- 阅读量(不蒜子) ---------- */
+.page-views,
+.site-views {
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.page-views {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+/* ---------- 正文排版微调 ---------- */
+.page-content img {
+  border-radius: 6px;
+}
+
+/* 文章页面宽度更舒适 */
+.page-wrapper {
+  max-width: 46rem;
+}
+
+@media (max-width: 768px) {
+  .hot-list li {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

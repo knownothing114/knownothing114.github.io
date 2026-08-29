@@ -1,29 +1,29 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+layout: page
+title: 关于
+permalink: /about/
 ---
 
 <center>
      <h1>付嘉康</h1>
      <div>
          <span>
-             <img src="assets/resumeAssets/phone-solid.svg" width="18px" alt="">
+             <img src="/assets/resumeAssets/phone-solid.svg" width="18px" alt="">
              18662339383
          </span>
          ·
          <span>
-             <img src="assets/resumeAssets/envelope-solid.svg" width="18px" alt="">
+             <img src="/assets/resumeAssets/envelope-solid.svg" width="18px" alt="">
              kangkangkang114@qq.com
          </span>
          ·
          <span>
-             <img src="assets/resumeAssets/github-brands.svg" width="18px" alt="">
+             <img src="/assets/resumeAssets/github-brands.svg" width="18px" alt="">
              <a href="https://github.com/knownothing114">knownothing114</a>
          </span>
          ·
          <span>
-             <img src="assets/resumeAssets/rss-solid.svg" width="18px" alt="">
+             <img src="/assets/resumeAssets/rss-solid.svg" width="18px" alt="">
              <a href="https://knownothing114.github.io/">康康的博客</a>
          </span>
      </div>
@@ -31,22 +31,22 @@ order: 4
 
 
 
-## <img src="assets/resumeAssets/info-circle-solid.svg" width="30px" alt=""> 个人信息
+## <img src="/assets/resumeAssets/info-circle-solid.svg" width="30px" alt=""> 个人信息
 
 - 男，2003年2月27日出生
 - 工作经验：1 年
 - 期望薪资：8-10k
 
-## <img src="assets/resumeAssets/graduation-cap-solid.svg" width="30px" alt=""> 教育经历
+## <img src="/assets/resumeAssets/graduation-cap-solid.svg" width="30px" alt=""> 教育经历
 
 - 本科，江苏科技大学苏州理工学院，软件工程专业，2021.09~2025.06
 - 通过了 CET4 英语等级考试
 
-## <img src="assets/resumeAssets/briefcase-solid.svg" width="30px" alt=""> 工作经历
+## <img src="/assets/resumeAssets/briefcase-solid.svg" width="30px" alt=""> 工作经历
 
 - **信华信技术股份有限公司，软件开发二部，软件开发工程师，2024.12~2026.5**
 
-## <img src="assets/resumeAssets/project-diagram-solid.svg" width="30px" alt=""> 项目经历
+## <img src="/assets/resumeAssets/project-diagram-solid.svg" width="30px" alt=""> 项目经历
 
 - **医保系统重构项目**  
 该项目是将原有基于 Visual Basic 开发的 legacy 医保管理系统，使用 OutSystems 低代码平台进行全栈重构，实现参保管理、费用结算、帐票打印等核心功能的现代化升级，支撑日均数万笔医保业务的高效处理。
@@ -81,7 +81,7 @@ order: 4
   使用 SpringCloud 对项目进行重构。   
   持续优化：对所实施的方案进行持续优化和改进，以适应业务需求的变化和技术的发展。  
 
-## <img src="assets/resumeAssets/tools-solid.svg" width="30px" alt=""> 技能清单
+## <img src="/assets/resumeAssets/tools-solid.svg" width="30px" alt=""> 技能清单
 
 - 熟练使用windows，macos，linux等主流操作系统
 - 扎实 Java 基础，熟悉 JVM、多线程及设计模式
@@ -91,4 +91,3 @@ order: 4
 - 熟悉 Vue+ElementUI，具备全栈开发能力
 - 熟悉 Linux 常用命令，可独立完成服务部署与排查
 - 具备良好的跨部门协作能力，能高效对接客户需求
-
