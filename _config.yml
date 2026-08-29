@@ -57,6 +57,14 @@ kramdown:
 paginate: 10
 paginate_path: /page:num/
 
+# 文章默认值
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
 # 搜索
 search_full_content: true
 
