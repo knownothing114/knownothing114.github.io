@@ -1,11 +1,19 @@
-# 站点导航
-- title: 首页
-  url: /
-- title: 分类
-  url: /categories/
-- title: 标签
-  url: /tags/
-- title: 归档
-  url: /posts/
-- title: 关于
-  url: /about/
+header:
+  - titles:
+      en      : &ARCHIVE_EN       Archive
+      zh-CN   : &ARCHIVE_ZH       归档
+      zh-Hans : *ARCHIVE_ZH
+      zh      : *ARCHIVE_ZH
+    url: /archive.html
+  - titles:
+      en      : &CAT_EN       Categories
+      zh-CN   : &CAT_ZH       分类
+      zh-Hans : *CAT_ZH
+      zh      : *CAT_ZH
+    url: /categories.html
+  - titles:
+      en      : &ABOUT_EN       About
+      zh-CN   : &ABOUT_ZH       关于
+      zh-Hans : *ABOUT_ZH
+      zh      : *ABOUT_ZH
+    url: /about.html

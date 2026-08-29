@@ -2,14 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-so-simple", "~> 3.2"
-
-# 主题依赖的插件(显式声明,保证 Actions 环境一致)
-gem "jekyll-seo-tag"
-gem "jekyll-sitemap"
-gem "jekyll-feed"
-gem "jekyll-paginate"
-gem "jekyll-gist"
+gem "jekyll-text-theme", "~> 2.2"
 
 gem "html-proofer", "~> 5.0", group: :test
 

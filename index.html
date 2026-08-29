@@ -1,4 +1,45 @@
 ---
 layout: home
-# Index page
+articles:
+  excerpt_type: html
 ---
+
+<!-- ============ 统计区 ============ -->
+{% assign total_chars = 0 %}
+{% for p in site.posts %}
+  {% assign post_len = p.content | strip_html | size %}
+  {% assign total_chars = total_chars | plus: post_len %}
+{% endfor %}
+
+<div class="home-stats">
+  <div class="home-stat">
+    <div class="home-stat__num">{{ site.posts | size }}</div>
+    <div class="home-stat__label">文章</div>
+  </div>
+  <div class="home-stat">
+    <div class="home-stat__num">{{ site.categories | size }}</div>
+    <div class="home-stat__label">分类</div>
+  </div>
+  <div class="home-stat">
+    <div class="home-stat__num">{{ site.tags | size }}</div>
+    <div class="home-stat__label">标签</div>
+  </div>
+  <div class="home-stat">
+    <div class="home-stat__num">{{ total_chars | times: 1.0 | divided_by: 1000 | round: 1 }}k</div>
+    <div class="home-stat__label">总字数</div>
+  </div>
+</div>
+
+<!-- ============ 热门文章 ============ -->
+{% assign hot_posts = site.posts | where_exp: 'p', 'p.views' | sort: 'views' | reverse %}
+{% if hot_posts.size > 0 %}
+  <h2 class="home-section-title">热门文章</h2>
+  <ol class="home-hot">
+    {% for p in hot_posts limit: 5 %}
+      <li>
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+        <span class="home-hot__views">{{ p.views }} 次阅读</span>
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}

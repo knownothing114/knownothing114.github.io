@@ -1,0 +1,14 @@
+<!-- 不蒜子:站点统计 -->
+<script>
+  window.addEventListener('load', function() {
+    // 首页文章列表暂无单篇浏览量数据源,隐藏浏览量条目
+    document.querySelectorAll('.js-pageview').forEach(function(e) {
+      var li = e.closest('li');
+      if (li) { li.style.display = 'none'; }
+    });
+  });
+</script>
+<p class="home-site-views">
+  <span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
+  <span id="busuanzi_container_site_uv"> · 访客数 <span id="busuanzi_value_site_uv"></span></span>
+</p>
