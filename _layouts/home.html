@@ -39,7 +39,7 @@ layout: page
 </div>
 
 <!-- ============ 热门文章(按浏览量) ============ -->
-{% assign hot_posts = site.posts | where: 'views' | sort: 'views' | reverse %}
+{% assign hot_posts = site.posts | where_exp: 'p', 'p.views' | sort: 'views' | reverse %}
 {% if hot_posts.size > 0 %}
   <h2 class="home-section-title">热门文章</h2>
   <ol class="hot-list">
